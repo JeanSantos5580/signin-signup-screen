@@ -1,6 +1,6 @@
 import {
-  BoxSigninForm,
-  FormSignin,
+  BoxSignupForm,
+  FormSignup,
   ContainerEmailOptions,
   Button,
   Input,
@@ -9,16 +9,18 @@ import appleLogo from '../../assets/apple-logo.svg'
 import facebookLogo from '../../assets/facebook-logo.svg'
 import googleLogo from '../../assets/google-logo.svg'
 
-export function SigninForm() {
+export function SignupForm() {
   return (
-    <BoxSigninForm>
-      <h3>Sign in</h3>
-      <FormSignin>
+    <BoxSignupForm>
+      <h3>Sign up</h3>
+      <FormSignup>
         <Input type="email" placeholder="Enter email" name="" />
+        <Input type="password" placeholder="Create User name" name="" />
+        <Input type="password" placeholder="Contact number" name="" />
         <Input type="password" placeholder="Password" name="" />
-        <a href="">Forgot password?</a>
-        <Button>Login</Button>
-      </FormSignin>
+        <Input type="password" placeholder="Confirm password" name="" />
+        <Button>Register</Button>
+      </FormSignup>
       <small>or continue with</small>
       <ContainerEmailOptions>
         <button title="Facebook account">
@@ -31,6 +33,6 @@ export function SigninForm() {
           <img src={googleLogo} alt="" />
         </button>
       </ContainerEmailOptions>
-    </BoxSigninForm>
+    </BoxSignupForm>
   )
 }

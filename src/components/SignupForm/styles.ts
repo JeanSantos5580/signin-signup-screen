@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const BoxSigninForm = styled.article`
+export const BoxSignupForm = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,36 +17,18 @@ export const BoxSigninForm = styled.article`
     color: ${(props) => props.theme.colors['gray-300']};
   }
 `
-export const FormSignin = styled.form`
+export const FormSignup = styled.form`
   display: flex;
   flex-direction: column;
 
   input + input {
     margin-top: 30px;
   }
-
-  a {
-    color: ${(props) => props.theme.colors['gray-300']};
-    font-size: 0.8333rem;
-    text-decoration: none;
-    width: fit-content;
-    margin-top: 1.0625rem;
-    margin-bottom: 2.875rem;
-    margin-left: auto;
-    &:hover {
-      color: ${(props) => props.theme.colors['purple-300']};
-    }
-  }
 `
 export const Input = styled.input`
   padding: 0.875rem 1.625rem;
   border-radius: 0.5rem;
   border: none;
-  color: ${(props) => props.theme.colors['purple-500']};
-
-  &::placeholder {
-    color: ${(props) => props.theme.colors['purple-500']};
-  }
 `
 
 export const Button = styled.button`
@@ -56,6 +38,8 @@ export const Button = styled.button`
   background: ${(props) => props.theme.colors['purple-500']};
   border-radius: 0.5rem;
   margin-bottom: 3.375rem;
+  margin-top: 1.75rem;
+
   cursor: pointer;
 `
 

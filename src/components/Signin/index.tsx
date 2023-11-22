@@ -1,11 +1,11 @@
-import { SideInfo } from '../SideInfo'
+import { SideInfoSignin } from '../SideInfoSignin'
 import { SigninForm } from '../SigninForm/SigninForm'
 import { BoxSignin } from './styles'
 
 export function Signin() {
   return (
     <BoxSignin>
-      <SideInfo />
+      <SideInfoSignin />
       <SigninForm />
     </BoxSignin>
   )

@@ -1,13 +1,14 @@
-import { BoxSideInfo, Link, Subtitle, Title } from './styles'
+import { NavLink } from 'react-router-dom'
+import { BoxSideInfo, Subtitle, Title } from './styles'
 
-export function SideInfo() {
+export function SideInfoSignin() {
   return (
     <BoxSideInfo>
       <Title>Sign in to</Title>
       <Subtitle>our development universe 🪐💫</Subtitle>
       <small>If you don&apos;t have an account register</small>
       <small>
-        You can <Link href="">Register here!</Link>
+        You can <NavLink to="/signup">Register here!</NavLink>
       </small>
     </BoxSideInfo>
   )
