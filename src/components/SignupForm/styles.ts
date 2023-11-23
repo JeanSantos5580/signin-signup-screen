@@ -29,6 +29,11 @@ export const Input = styled.input`
   padding: 0.875rem 1.625rem;
   border-radius: 0.5rem;
   border: none;
+  color: ${(props) => props.theme.colors['purple-500']};
+
+  &::placeholder {
+    color: ${(props) => props.theme.colors['purple-500']};
+  }
 `
 
 export const Button = styled.button`
