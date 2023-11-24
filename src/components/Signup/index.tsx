@@ -1,5 +1,5 @@
 import { SideInfo } from '../SideInfo'
-import { SignupForm } from '../SignupForm'
+import { SignupForm } from '../Form/SignupForm'
 import { BoxSignup } from './styles'
 
 export function Signup() {

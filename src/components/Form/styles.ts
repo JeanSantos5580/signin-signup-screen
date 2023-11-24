@@ -1,30 +1,47 @@
 import styled from 'styled-components'
 
-export const BoxSigninForm = styled.article`
+const Box = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex: 1;
-
-  h3 {
-    font-size: 1.875rem;
-    font-weight: 500;
-    margin-bottom: 1.75rem;
-  }
 
   small {
     margin: 0 auto;
     color: ${(props) => props.theme.colors['gray-300']};
   }
 `
-export const FormSignin = styled.form`
+
+export const BoxSigninForm = styled(Box)`
+  @media screen and (max-width: 750px) {
+    margin-bottom: 2rem;
+  }
+`
+
+export const BoxSignupForm = styled(Box)`
+  margin-bottom: 2rem;
+`
+
+export const FormTitle = styled.h3`
+  font-size: 1.875rem;
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+
+  @media screen and (max-width: 750px) {
+    display: none;
+  }
+`
+
+export const Form = styled.form`
   display: flex;
   flex-direction: column;
 
   input + input {
     margin-top: 30px;
   }
+`
 
+export const FormSignin = styled(Form)`
   a {
     color: ${(props) => props.theme.colors['gray-300']};
     font-size: 0.8333rem;
@@ -36,8 +53,14 @@ export const FormSignin = styled.form`
     &:hover {
       color: ${(props) => props.theme.colors['purple-300']};
     }
+
+    @media screen and (max-width: 750px) {
+      font-size: 0.75rem;
+    }
   }
 `
+export const FormSignup = styled(Form)``
+
 export const Input = styled.input`
   padding: 0.875rem 1.625rem;
   border-radius: 0.5rem;
@@ -57,6 +80,11 @@ export const Button = styled.button`
   border-radius: 0.5rem;
   margin-bottom: 3.375rem;
   cursor: pointer;
+`
+
+export const ButtonSignup = styled(Button)`
+  margin-top: 1.75rem;
+  margin-bottom: 3.375rem;
 `
 
 export const ContainerEmailOptions = styled.footer`

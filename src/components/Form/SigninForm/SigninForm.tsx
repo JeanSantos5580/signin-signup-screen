@@ -4,15 +4,16 @@ import {
   ContainerEmailOptions,
   Button,
   Input,
-} from './styles'
-import appleLogo from '../../assets/apple-logo.svg'
-import facebookLogo from '../../assets/facebook-logo.svg'
-import googleLogo from '../../assets/google-logo.svg'
+  FormTitle,
+} from '../styles'
+import appleLogo from '../../../assets/apple-logo.svg'
+import facebookLogo from '../../../assets/facebook-logo.svg'
+import googleLogo from '../../../assets/google-logo.svg'
 
 export function SigninForm() {
   return (
     <BoxSigninForm>
-      <h3>Sign in</h3>
+      <FormTitle>Sign in</FormTitle>
       <FormSignin>
         <Input type="email" placeholder="Enter email" name="" />
         <Input type="password" placeholder="Password" name="" />

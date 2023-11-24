@@ -2,24 +2,25 @@ import {
   BoxSignupForm,
   FormSignup,
   ContainerEmailOptions,
-  Button,
   Input,
-} from './styles'
-import appleLogo from '../../assets/apple-logo.svg'
-import facebookLogo from '../../assets/facebook-logo.svg'
-import googleLogo from '../../assets/google-logo.svg'
+  FormTitle,
+  ButtonSignup,
+} from '../styles'
+import appleLogo from '../../../assets/apple-logo.svg'
+import facebookLogo from '../../../assets/facebook-logo.svg'
+import googleLogo from '../../../assets/google-logo.svg'
 
 export function SignupForm() {
   return (
     <BoxSignupForm>
-      <h3>Sign up</h3>
+      <FormTitle>Sign up</FormTitle>
       <FormSignup>
         <Input type="email" placeholder="Enter email" name="" />
         <Input type="password" placeholder="Create User name" name="" />
         <Input type="password" placeholder="Contact number" name="" />
         <Input type="password" placeholder="Password" name="" />
         <Input type="password" placeholder="Confirm password" name="" />
-        <Button>Register</Button>
+        <ButtonSignup>Register</ButtonSignup>
       </FormSignup>
       <small>or continue with</small>
       <ContainerEmailOptions>
