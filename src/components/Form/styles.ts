@@ -66,6 +66,7 @@ export const Input = styled.input`
   border-radius: 0.5rem;
   border: none;
   color: ${(props) => props.theme.colors['purple-500']};
+  background: ${(props) => props.theme.inputBackgroundColor};
 
   &::placeholder {
     color: ${(props) => props.theme.colors['purple-500']};

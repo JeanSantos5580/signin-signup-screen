@@ -1,4 +1,16 @@
-export const defaultTheme = {
+import { keyframes } from "styled-components"
+
+const toggle = keyframes`
+  from{
+    transform: translateX(5px);
+  }
+
+  to{
+    transform: translateX(17px);
+  }
+  `
+
+export default {
   colors: {
     white: '#fff',
 
@@ -23,4 +35,10 @@ export const defaultTheme = {
     'purple-300': '#A7A3FF',
     'purple-500': '#4D47C3',
   },
+  spacing: {
+    small: 8,
+    medium: 16,
+    large: 24,
+  },
+  borderRadius: '8px',
 }

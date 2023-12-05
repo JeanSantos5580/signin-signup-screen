@@ -14,10 +14,13 @@ const routes = [
   },
 ]
 
-export function Router() {
+export function Router({ handleChangeTheme }) {
   return (
     <Routes>
-      <Route path="/" element={<DefaultLayout />}>
+      <Route
+        path="/"
+        element={<DefaultLayout handleChangeTheme={handleChangeTheme} />}
+      >
         {routes.map((route) => (
           <Route key={route.path} path={route.path} element={route.element} />
         ))}

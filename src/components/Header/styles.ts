@@ -27,4 +27,10 @@ export const NavigationButtonsContainer = styled.div`
       border-bottom: 2px solid ${(props) => props.theme.colors['purple-500']};
     }
   }
+
+  div {
+    display: flex;
+    align-items: center;
+    padding-right: 34px;
+  }
 `
