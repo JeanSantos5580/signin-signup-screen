@@ -9,7 +9,7 @@ export function SideInfo() {
 
   const subtitleText =
     path === '/'
-      ? 'our development universe 🪐💫'
+      ? 'our development universe 🚀💫'
       : 'our fantastic community! 🧑‍💻'
 
   const message =

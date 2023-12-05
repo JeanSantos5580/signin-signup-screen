@@ -36,7 +36,8 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
 
-  input + input {
+  input + input,
+  div + input {
     margin-top: 30px;
   }
 `
@@ -61,7 +62,23 @@ export const FormSignin = styled(Form)`
 `
 export const FormSignup = styled(Form)``
 
+export const PasswordInputContainer = styled.div`
+  width: 100%;
+  display: flex;
+  position: relative;
+  margin-top: 30px;
+
+  svg {
+    color: ${(props) => props.theme.colors['purple-500']};
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+  }
+`
+
 export const Input = styled.input`
+  flex: 1;
   padding: 0.875rem 1.625rem;
   border-radius: 0.5rem;
   border: none;

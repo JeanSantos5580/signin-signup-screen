@@ -1,7 +1,16 @@
-import { createContext, useState, ReactNode, useEffect } from 'react'
+import {
+  createContext,
+  useState,
+  ReactNode,
+  useEffect,
+  useContext,
+} from 'react'
+
+import { ThemeProvider as ThemeProviderStyledComponents } from 'styled-components'
+import { themes } from '../styles/themes'
 
 interface ThemeChangerContextData {
-  theme: string
+  theme: 'dark' | 'light'
   handleChangeTheme: () => void
 }
 
@@ -11,13 +20,13 @@ interface MyThemeProviderProps {
 
 export const ThemeContext = createContext({} as ThemeChangerContextData)
 
-export function MyThemeProvider({ children }: MyThemeProviderProps) {
-  const getTheme = (): string => {
-    const selectedTheme = localStorage.getItem('theme')
+export function ThemeProvider({ children }: MyThemeProviderProps) {
+  const getTheme = (): 'dark' | 'light' => {
+    const selectedTheme = localStorage.getItem('theme') as 'dark' | 'light'
     return selectedTheme || 'dark'
   }
 
-  const [theme, setTheme] = useState<string>(getTheme())
+  const [theme, setTheme] = useState<'dark' | 'light'>(getTheme())
 
   useEffect(() => {
     localStorage.setItem('theme', theme)
@@ -25,12 +34,21 @@ export function MyThemeProvider({ children }: MyThemeProviderProps) {
 
   const handleChangeTheme = (): void => {
     setTheme((prevState) => (prevState === 'dark' ? 'light' : 'dark'))
-    console.log('Mudou tema')
   }
 
   return (
     <ThemeContext.Provider value={{ handleChangeTheme, theme }}>
-      {children}
+      <ThemeProviderStyledComponents theme={themes[theme]}>
+        {children}
+      </ThemeProviderStyledComponents>
     </ThemeContext.Provider>
   )
+}
+
+export const useTheme = () => {
+  const context = useContext(ThemeContext)
+  if (!context) {
+    throw new Error('useTheme must be used within a ThemeProvider')
+  }
+  return context
 }

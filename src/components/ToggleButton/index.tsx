@@ -1,6 +1,8 @@
+import { useTheme } from '../../context/ToggleThemeContext'
 import { Input, Moon, Slider, Sun, Switch } from './styles'
 
-export function ToggleButton({ handleChangeTheme }) {
+export function ToggleButton() {
+  const { handleChangeTheme } = useTheme()
   return (
     <>
       <Switch>
